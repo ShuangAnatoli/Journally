@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Journal</title>
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Caveat:wght@600&family=Merienda:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+  <!-- CSS STYLESHEETS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.css">
+  <!-- FONT AWESOME -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <!-- BOOTSTRAP JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <script src="js/myjs.js"></script>
+</head>
+
+<body>
+  <div class="tab">
+    <h2>Contents</h2>
+
+    <button class="tablinks defaultOpen" onclick="openAction(event, 'Todo')">To-do List</button>
+    <button class="tablinks" onclick="openAction(event, 'Journal')">Journal</button>
+    <!-- <button class="tablinks" onclick="openAction(event, 'Timetable')">Timetable</button> -->
+    <button class="tablinks" onclick="openAction(event, 'Chill')">Chill</button>
+    <button class="tablinks" onclick="openAction(event, 'Plus')"><span class="fas fa-plus"></span></button>
+  </div>
+
+    <!-- Todo -->
+    <div id="Todo" class="tabcontent">
+      <h3>To-do List <i class="fas fa-th-list"></i></h3>
+      <p>
+        We all have those days when there are a million things to do, and we don't know how we're going to get it all done.
+        Having a list of all your tasks will allow you to sit down and make plans.
+      </p>
+      <div class="main-content">
+        <div id="myDIV" class="header">
+          <h2>My To Do List</h2>
+          <input type="text" id="myInput" placeholder="New Task">
+          <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+
+        <ul id="myTask">
+
+        </ul>
+      </div>
+    </div>
+  <!-- Journal -->
+  <div id="Journal" class="tabcontent">
+    <h3>Journal <i class="fas fa-book"></i></h3>
+    <p>Diaries help us to organize our thoughts and make them apprehensible. You can record daily events, thoughts and feelings about certain experiences or opinions.</p>
+    <div class="main-content">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-link active journal-font" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Journal</a>
+          <a class="nav-link journal-font" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Mood</a>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <div id="myDIV" class="header">
+            <h2 class="journal-title">My Journal</h2>
+            <textarea class="journal-area" name="name" rows="5" cols="90" placeholder="How are you feeling today?"></textarea>
+            <span class="addBtn">Add</span>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <h3 class="mood-title">Let's track your mood...</h3>
+          <div class="row">
+            <div class="col-lg-3 mood">
+              <button class="mood-btn">
+                <img src="http://assets.stickpng.com/thumbs/587e31f49686194a55adab6e.png" alt=""><br>
+                <h3>Happy</h3>
+              </button>
+            </div>
+            <div class="col-lg-3 mood">
+              <button class="mood-btn">
+                <img src="http://assets.stickpng.com/thumbs/587e325d9686194a55adab79.png" alt=""><br>
+                <h3>Sad</h3>
+              </button>
+            </div>
+            <div class="col-lg-3 mood">
+              <button class="mood-btn">
+                <img src="http://assets.stickpng.com/thumbs/587e32399686194a55adab76.png" alt=""><br>
+                <h3>Hungry</h3>
+              </button>
+            </div>
+            <div class="col-lg-3 mood">
+              <button class="mood-btn">
+                <img src="http://assets.stickpng.com/thumbs/587e32649686194a55adab7a.png" alt=""><br>
+                <h3>Tired</h3>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Timetable -->
+  <!-- <div id="Timetable" class="tabcontent">
+    <h3>Timetable</h3>
+    <p>Timetable</p>
+    <div>
+      <div class="row">
+        <div div="col-4-lg col-">
+
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- Chill -->
+  <div id="Chill" class="tabcontent container-fluid">
+    <h3>Chill</h3>
+    <p>Participating in recreational activities helps manage stress. Taking time to nurture oneself provides a sense of balance and self-esteem, which can directly reduce anxiety and depression. Add your favourite movies and songs so that you can enjoy.</p>
+    <div>
+      <div class="row chill">
+        <div class="col-lg-4 col-md-6 chill-content">
+          <h3>Movies to watch</h3>
+          <ul>
+            <li><i class="fas fa-ticket-alt"></i> The Godfather</li>
+            <li><i class="fas fa-ticket-alt"></i> Fight Club</li>
+            <li>...</li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 chill-content">
+          <h3>Favourite Songs</h3>
+          <ul>
+            <li><i class="fas fa-music"></i> Stay</li>
+            <li><i class="fas fa-music"></i> Hush</li>
+            <li>...</li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 chill-content">
+          <h3><i class="fas fa-plus"></i></h3>
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- More -->
+  <div id="Plus" class="tabcontent">
+    <h3>For More</h3>
+    <p>...</p>
+  </div>
+</body>
+
+</html>
